@@ -1,99 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Luke Sharples | Cybersecurity Portfolio</title>
 
 <style>
-body {
-font-family: Arial;
+
+body{
+font-family: Arial, sans-serif;
 margin:0;
 background:#0f172a;
 color:white;
+scroll-behavior:smooth;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38bdf8;
 }
 
 header{
-padding:60px;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-background:#020617;
 }
 
-h1{
-font-size:48px;
+header h1{
+font-size:60px;
 margin-bottom:10px;
 }
 
+header p{
+font-size:22px;
+color:#94a3b8;
+}
+
+.button{
+margin-top:20px;
+padding:12px 25px;
+background:#38bdf8;
+color:black;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
 section{
-max-width:900px;
+max-width:1000px;
 margin:auto;
-padding:40px;
+padding:80px 20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
 background:#1e293b;
-padding:20px;
-margin:20px 0;
-border-radius:8px;
+padding:25px;
+border-radius:10px;
+transition:transform 0.2s;
 }
 
-a{
-color:#38bdf8;
-text-decoration:none;
+.card:hover{
+transform:translateY(-8px);
 }
 
 footer{
 text-align:center;
 padding:30px;
 background:#020617;
+color:#94a3b8;
 }
+
 </style>
 </head>
 
 <body>
 
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <header>
+
 <h1>Luke Sharples</h1>
-<p>Cybersecurity & AI Automation Enthusiast</p>
+
+<p>Cybersecurity • AI Automation • Security Engineering</p>
+
+<a class="button" href="#projects">View Projects</a>
+
 </header>
 
-<section>
+<section id="about">
+
 <h2>About Me</h2>
 
-<div class="card">
 <p>
-I’m a cybersecurity professional focused on defensive security,
-automation, and AI-powered tools. I hold Security+ and CySA+
-certifications and enjoy building systems that improve
-security visibility and response.
+I'm a cybersecurity professional focused on defensive security,
+automation, and AI-powered tools. I enjoy building systems that
+improve threat detection, automate security tasks, and make
+security operations more efficient.
 </p>
-</div>
+
+</section>
+
+<section id="skills">
 
 <h2>Skills</h2>
 
+<div class="grid">
+
 <div class="card">
-Cybersecurity<br>
-Threat detection • Security analysis • SIEM • Risk management
+<h3>Cybersecurity</h3>
+<p>Threat detection, SIEM analysis, incident response</p>
 </div>
 
 <div class="card">
-Technical<br>
-Python • Automation • AI agents • Linux
+<h3>Automation</h3>
+<p>Python scripting, security automation, workflow tools</p>
 </div>
 
 <div class="card">
-Governance<br>
-ISO 27001 • Security auditing • Compliance
+<h3>AI & Agents</h3>
+<p>AI-powered tools for security monitoring and automation</p>
 </div>
+
+<div class="card">
+<h3>Governance</h3>
+<p>ISO 27001, risk management, security auditing</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
 
 <h2>Projects</h2>
 
+<div class="grid">
+
 <div class="card">
 <h3>AI Security Log Analyzer</h3>
-<p>An AI agent that reviews system logs and flags suspicious behaviour.</p>
+<p>An AI agent that analyses system logs and highlights suspicious activity.</p>
 </div>
 
 <div class="card">
-<h3>Phishing Email Detector</h3>
-<p>Machine learning tool that detects phishing attempts.</p>
+<h3>Phishing Detection Tool</h3>
+<p>Machine learning model that detects phishing emails.</p>
 </div>
 
 <div class="card">
@@ -101,18 +188,31 @@ ISO 27001 • Security auditing • Compliance
 <p>Python scripts to automate common security tasks.</p>
 </div>
 
-<h2>Contact</h2>
-
 <div class="card">
-<p>GitHub: Coming Soon!</p>
-<p>LinkedIn: linkedin.com/lukesharples</p>
+<h3>Cybersecurity Home Lab</h3>
+<p>Self-built security monitoring environment for learning and testing.</p>
+</div>
+
 </div>
 
 </section>
 
+<section id="contact">
+
+<h2>Useful Links</h2>
+
+<p>GitHub: github.com/lukesharples</p>
+
+<p>LinkedIn: linkedin.com/lukesharples</p>
+
+</section>
+
 <footer>
+
 <p>© 2026 Luke Sharples</p>
+
 </footer>
 
 </body>
+
 </html>
